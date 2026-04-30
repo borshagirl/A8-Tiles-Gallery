@@ -19,7 +19,6 @@ const Banner = () => {
             </div>
 
             <div className="shadow-lg rounded-md py-5 px-3">
-              {/* Marquee */}
                 <Marquee pauseOnHover={true} speed={130}>
                     <div className="text-gray-500">
                       New Arrivals | Modern Geometric Patterns | Join Community
