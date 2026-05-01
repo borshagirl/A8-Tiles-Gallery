@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Banner = () => {
     return (
-        <div className="container mx-auto space-y-5">
+        <div className="">
             <div className="text-center py-15">
               <h1 className="text-5xl font-semibold mb-6">
                 Discover Your Perfect Aesthetic

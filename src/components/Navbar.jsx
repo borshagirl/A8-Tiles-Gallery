@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div>
+        <div className="my-5">
             <div className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
       
                 <Link href="/" className="text-xl font-semibold">
                   TilesGallery
                 </Link>
 
-                <div className="hidden md:flex gap-6 text-gray-600">
+                <div className="flex gap-4 text-gray-600">
                   <Link href="/">Home</Link>
                   <Link href="/all-tiles">All Tiles</Link>
                 </div>

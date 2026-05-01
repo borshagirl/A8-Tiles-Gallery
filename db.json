@@ -1,0 +1,125 @@
+
+{
+    "products": [
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Glossy White Tile",
+    "description": "High gloss white ceramic tile for modern interiors",
+    "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=800&auto=format",
+    "category": "ceramic",
+    "price": 39.99,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Matte Grey Tile",
+    "description": "Elegant matte grey tile for minimalist design",
+    "image": "https://images.unsplash.com/photo-1560185008-b033106af5c3?w=800&auto=format",
+    "category": "porcelain",
+    "price": 52.00,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": false
+  },
+  {
+    "id": "tile_004",
+    "title": "Marble Finish Tile",
+    "description": "Luxury marble look tile with smooth surface",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format",
+    "category": "marble",
+    "price": 75.50,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Wood Texture Tile",
+    "description": "Natural wood finish tile for cozy interiors",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=800&auto=format",
+    "category": "wood",
+    "price": 65.25,
+    "currency": "USD",
+    "dimensions": "20x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Black Granite Tile",
+    "description": "Durable black granite tile for heavy usage",
+    "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200&auto=format&fit=crop",
+    "category": "granite",
+    "price": 88.00,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Granite",
+    "inStock": false
+  },
+  {
+    "id": "tile_007",
+    "title": "Patterned Mosaic Tile",
+    "description": "Decorative mosaic tile with unique patterns",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format",
+    "category": "mosaic",
+    "price": 55.75,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Rustic Brown Tile",
+    "description": "Earthy brown tile for rustic style homes",
+    "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&auto=format",
+    "category": "ceramic",
+    "price": 42.30,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Beige Stone Tile",
+    "description": "Soft beige tile with natural stone finish",
+    "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=1200&auto=format&fit=crop",
+    "category": "stone",
+    "price": 70.10,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Stone",
+    "inStock": false
+  },
+  {
+    "id": "tile_010",
+    "title": "Outdoor Anti-Slip Tile",
+    "description": "Rough surface tile designed for outdoor safety",
+    "image": "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&auto=format",
+    "category": "outdoor",
+    "price": 58.90,
+    "currency": "USD",
+    "dimensions": "40x40 cm",
+    "material": "Porcelain",
+    "inStock": true
+  }
+]
+}
