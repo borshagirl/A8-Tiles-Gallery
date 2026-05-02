@@ -6,6 +6,7 @@ import {Check, Eye, EyeSlash} from "@gravity-ui/icons";
 import { useState } from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import { FaGoogle } from "react-icons/fa";
 
 
 const LoginPage = () => {
@@ -26,14 +27,18 @@ const LoginPage = () => {
         });
 
         console.log({data, error})
+    }
 
-        
-
+    const handleGoogleSignIn = async () => {
+            await authClient.signIn.social({
+            provider: "google",
+          });
     }
 
 
     return (
         <div className="mx-auto shadow-2xl p-4 rounded-lg my-8">
+            <h2 className="text-center text-xl font-semibold mb-3">Sign In</h2>
             <Form
                className="flex w-96 flex-col gap-4"
                render={(props) => <form {...props} data-custom="foo" />}
@@ -57,7 +62,7 @@ const LoginPage = () => {
                  <FieldError />
                </TextField>
                {/* password */}
-                <TextField className="w-full" name="password">
+                <TextField className="w-full rounded-full" name="password">
                     <Label>Password</Label>
                     <InputGroup>
                       <InputGroup.Input
@@ -92,7 +97,9 @@ const LoginPage = () => {
              </Form>
              <p className="mt-2">
                Don't have an Account? <Link href={"/register"} className="text-blue-500">Register</Link>
-             </p>   
+             </p>
+             <p className="text-center my-3">Or</p>
+             <Button onClick={handleGoogleSignIn} variant="outline" className="w-full"><FaGoogle /> Sign In Google</Button>
         </div>
     );
 };

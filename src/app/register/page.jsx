@@ -5,6 +5,7 @@ import {Check, Eye, EyeSlash} from "@gravity-ui/icons";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 
 const RegisterPage = () => {
@@ -32,16 +33,21 @@ const RegisterPage = () => {
         if(error) {
             toast.error(error.message)
         }
-
         if(data) {
             toast.success("Signup Successful")
         }
+    }
 
+     const handleGoogleSignIn = async () => {
+            await authClient.signIn.social({
+            provider: "google",
+          });
     }
 
 
     return (
-        <div className="mx-auto">
+        <div className="mx-auto shadow-2xl p-4 rounded-lg my-8">
+            <h2 className="text-center text-xl font-semibold mb-3">Register</h2>
             <Form
                className="flex w-96 flex-col gap-4"
                render={(props) => <form {...props} data-custom="foo" />}
@@ -128,6 +134,8 @@ const RegisterPage = () => {
                  </Button>
                </div>
              </Form>
+             <p className="text-center my-3">Or</p>
+             <Button onClick={handleGoogleSignIn} variant="outline" className="w-full"><FaGoogle /> Sign Up Google</Button>
         </div>
     );
 };
