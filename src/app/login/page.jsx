@@ -7,6 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const LoginPage = () => {
@@ -27,6 +28,10 @@ const LoginPage = () => {
         });
 
         console.log({data, error})
+        
+        if(error) {
+            toast.error(error.message)
+        }
     }
 
     const handleGoogleSignIn = async () => {

@@ -1,5 +1,6 @@
 "use client"
 import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,12 +30,20 @@ const Navbar = () => {
                       "Loading..."
                      ) : user ? (
                       <>
-                      <img src={user?.image} alt="UserAvatar" className=" w-8 h-8 rounded-full" />
+                      <Avatar className="h-10 w-10">
+                         <Avatar.Image 
+                            alt="John Doe" 
+                            src={user?.image}
+                            referrerPolicy="no-referrer" />
+                         <Avatar.Fallback>{user?.name?.charAt(0)}</Avatar.Fallback>
+                       </Avatar>
 
-                      <button onClick={async () => await authClient.signOut()}>Logout</button>
+                      <Button variant="danger" onClick={async () => await authClient.signOut()}>SignOut</Button>
                       </>
                     ) : (
-                      <Link href="/login">Login</Link>
+                      <Button variant="primary">
+                        <Link href="/login">Sign In</Link>
+                      </Button>
                     )}
                 </div>
             </div>
