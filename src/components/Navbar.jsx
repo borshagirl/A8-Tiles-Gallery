@@ -1,6 +1,6 @@
 "use client"
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Button } from "@heroui/react";
+import { Avatar, Button, Spinner } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
   console.log(user, "session")
 
     return (
-        <div className="my-5">
+        <div className="mb-10">
             <div className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
       
                 <Link href="/" className="text-xl font-semibold">
@@ -27,7 +27,10 @@ const Navbar = () => {
 
                 <div className="flex items-center gap-4">
                     {isPending ? ( 
-                      "Loading..."
+                      <div className="flex flex-col items-center gap-2">
+                         <Spinner color="success" />
+                         <span className="text-xs text-muted">Success</span>
+                      </div>
                      ) : user ? (
                       <>
                       <Avatar className="h-10 w-10">
