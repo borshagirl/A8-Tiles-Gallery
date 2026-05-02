@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="flex gap-4 text-gray-600">
                   <Link href="/">Home</Link>
                   <Link href="/all-tiles">All Tiles</Link>
-                  {user && <Link href="/my-profile">Profile</Link>}
+                  <Link href="/my-profile">Profile</Link>
                 </div>
 
                 <div className="flex items-center gap-4">
