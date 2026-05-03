@@ -6,10 +6,12 @@ import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 
 const RegisterPage = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const router = useRouter()
 
     const onSubmit = async (e) => {
         e.preventDefault()
@@ -34,6 +36,7 @@ const RegisterPage = () => {
             toast.error(error.message)
         }
         if(data) {
+            router.push('/')
             toast.success("Signup Successful")
         }
     }

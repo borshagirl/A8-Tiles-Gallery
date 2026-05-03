@@ -1,10 +1,16 @@
+import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Tiles Gallery - Details",
+  description: "Premium tiles with modern aesthetic designs",
+};
 
 
 const TileDetailsPage = async ({params}) => {
     const {id} = await params
-    const res = await fetch(`http://localhost:5000/products/${id}`)
+    const res = await fetch(`https://tile-gallery-json-server.onrender.com/products/${id}`)
     const tile = await res.json()
 
 
@@ -65,9 +71,11 @@ const TileDetailsPage = async ({params}) => {
               </div>
             </div>
 
-            <button className="mt-10 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-95">
-              Add to Project / Inquiry
-            </button>
+            <Link href="/all-tiles">
+              <Button variant="outline"className="mt-10 w-full ">
+                View Other All Tiles
+              </Button>
+            </Link>
             
           </div>
         </div>

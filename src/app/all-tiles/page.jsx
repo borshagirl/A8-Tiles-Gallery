@@ -1,11 +1,16 @@
 import TileCard from "@/components/TileCard";
 import { Button } from "@heroui/react";
 
+export const metadata = {
+  title: "Tiles Gallery - All Tiles",
+  description: "Premium tiles with modern aesthetic designs",
+};
+
 
 const AllTilesPage = async ({searchParams}) => {
     const params = await searchParams;
 
-    const res = await fetch("http://localhost:5000/products", {
+    const res = await fetch("https://tile-gallery-json-server.onrender.com/products", {
         cache: "no-store"
     })
 
@@ -30,7 +35,6 @@ const AllTilesPage = async ({searchParams}) => {
         <div>
        <div className="container mx-auto">
 
-      {/* Search (simple GET-based) */}
       <div className="flex justify-end">
         <form method="GET" className="mb-6 flex items-center gap-2">
         <input
@@ -43,7 +47,6 @@ const AllTilesPage = async ({searchParams}) => {
       </form>
       </div>
 
-      {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filtered.map(tile => (
           <TileCard key={tile.id} tile={tile}></TileCard>

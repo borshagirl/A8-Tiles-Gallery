@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function Home() {
 
-  const res = await fetch("http://localhost:5000/products")
+  const res = await fetch("https://tile-gallery-json-server.onrender.com/products")
   const tiles = await res.json()
 
   return (
@@ -33,7 +33,7 @@ export default async function Home() {
         ))
         }
       </div>
-
+      
    </div>
   );
 }
